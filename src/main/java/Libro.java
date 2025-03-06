@@ -1,15 +1,39 @@
 package main.java;
 
+/**
+ * Clase Libro
+ * 
+ * <p>Simula datos de libros en una biblioteca</p>
+ * 
+ * @author Carlos Fu
+ * @version 1.0
+ */
 public class Libro {
-
-    // TODO: Documentar estos atributos
+	/**
+	 * Valor String que representa "titulo del libro".
+	 */
     private String titulo;
+    
+    /**
+     * Valor String que representa "autor del libro".
+     */
     private String autor;
+    
+    /**
+     * Valor int que representa "año de publicación del libro".
+     */
     private int anioPublicacion;
 
-
-    // TODO: Documentar este método
     // TODO: Testear este método
+    /**
+     * Constructor de la clase Libro
+     * 
+     * <p>Instancia objetos libro mediante el uso del constructor.</p>
+     * 
+     * @param titulo Titulo del libro, valor String.
+     * @param autor Autor del libro, valor String.
+     * @param anioPublicacion Año de publicación, valor int o entero.
+     */
     public Libro(String titulo, String autor, int anioPublicacion) {
         this.titulo = titulo;
         this.autor = autor;
@@ -24,7 +48,11 @@ public class Libro {
         this.titulo = titulo;
     }
 
-    // TODO: Documentar este método
+    /**
+     * Getter de la clase Libro. Retorna el autor de valor String.
+     * 
+     * @return Autor del libro, de tipo String.
+     */
     public String getAutor() {
         return autor;
     }
@@ -33,7 +61,11 @@ public class Libro {
         this.autor = autor;
     }
 
-    // TODO: Documentar este método
+    /**
+     * Getter de la clase libro. Retorna el año de publicación de tipo int.
+     * 
+     * @return Retorna anioPublicacion, siendo un número entero. 
+     */
     public int getAnioPublicacion() {
         return anioPublicacion;
     }
