@@ -3,7 +3,7 @@ package main.java;
 /**
  * Clase Libro
  * 
- * <p>Simula datos de libros en una biblioteca</p>
+ * <p>Simula datos de libros en una biblioteca.</p>
  * 
  * @author Carlos Fu
  * @version 1.0

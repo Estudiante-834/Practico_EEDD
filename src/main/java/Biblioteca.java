@@ -3,18 +3,37 @@ package main.java;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Clase Biblioteca
+ * 
+ * <p>Simula datos de una biblioteca.</p>
+ * 
+ * @author Carlos Fu
+ * @version 1.0
+ */
 public class Biblioteca {
-
-    // TODO: Documentar estos atributos
+	/**
+	 * Atributo privado que representa una lista de libros en una biblioteca.
+	 * 
+	 * <p>La lista contiene objetos de la clase {@link Libro}.
+	 */
     private final List<Libro> libros;
 
-    // TODO: Documentar este método
+
+    /**
+     * Constructor de la clase {@link Biblioteca}.
+     * 
+     * <p>Instancia un objeto Biblioteca que contiene una {@link #ArrayList} vacía como atributo de objetos @{link Libro}.</p>
+     */
     public Biblioteca() {
         libros = new ArrayList<>();
     }
 
-    // TODO: Documentar este método.
-    //  Test: NO HAY QUE TESTEAR ESTE METODO
+    /**
+     * Constructor de la clase {@link Biblioteca}.
+     * 
+     * <p>Instancia un objeto Biblioteca aceptando una {@link #ArrayList} con objetos {@link Libro} como argumento.</p>
+     */
     public Biblioteca(List<Libro> libros) {
         this.libros = libros;
     }
@@ -31,7 +50,13 @@ public class Biblioteca {
         return libros.remove(libro);
     }
 
-    // TODO: Documentar este método
+    /**
+     * Getter de la clase Biblioteca.
+     * 
+     * <p>Retorna la lista de objetos {@link Libro} que tiene como atributo.</p>
+     * 
+     * @return Libros, lista con objetos {@link Libro}.
+     */
     public List<Libro> getLibros() {
         return libros;
     }
@@ -48,12 +73,12 @@ public class Biblioteca {
         return null;
     }
 
-    // TODO: Documentar este metodo.
-    //  No testearlo
-    // Este metodo está obsoleto. Hay que documentarlo como tal.
-    //  Recuerda: las anotaciones @deprecated y @link a la nueva
-    //  versión mejorada encuentraLibrosPorAutor(...)
-    //  En esta ocasión, NO TESTEAREMOS este metodo
+    /**
+     * @deprecated Método obsoleto.
+     * 
+     * @param autor Autor del libro tipo String.
+     * @return Retorna objeto {@link Libro} por autor.
+     */
     public Libro encuentaLibroPorAutor(String autor) {
         for (Libro libro : libros) {
             if (libro.getAutor().equals(autor)) {
@@ -63,12 +88,20 @@ public class Biblioteca {
         return null;
     }
 
-    // TODO: Documentar este metodo
-    // Este metodo sustituye al metodo anterior. Está disponible desde la
-    //  versión 2.0. Hay que documentarlo teniéndolo en cuenta.
     // TODO: Testear este metodo.
     //  Test: Comprobar la lista de libros que devuelve para un autor existentes.
     //  Test: Comprobar la lista de libros que devuelve para un autor No existente
+    /**
+     * Método busca libros de un autor específico.
+     * 
+     * <p>Método reemplaza al método obsoleto {@link #encuentaLibroPorAutor(String)}.</p>
+     * <p>El método devuelve una lista de libros por autor, 
+     * en vez de un solo libro como el método antiguo.</p>
+     * 
+     * @vesion 2.0
+     * @param autor Nombre del autor tipo String.
+     * @return Retorna Lista de libros por autor.
+     */
     public List<Libro> encuentraLibrosPorAutor(String autor) {
         List<Libro> listaLibros = null;
         for (Libro libro : libros) {
