@@ -24,7 +24,7 @@ public class Libro {
      */
     private int anioPublicacion;
 
-    // TODO: Testear este método
+    
     /**
      * Constructor de la clase Libro
      * 
